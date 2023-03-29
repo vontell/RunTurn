@@ -58,8 +58,6 @@ export async function runTurn(bot: RGBot) {
 
     try {
 
-        await bot.waitForMilliseconds(8000);
-
         // find out which team I'm on
         const myTeamName: string = bot.getMyTeam()
         const otherTeamName: string = bot.matchInfo().teams.find(t => t.name != myTeamName)?.name
